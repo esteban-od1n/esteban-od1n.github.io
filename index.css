@@ -1,0 +1,75 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #002244; /* Color azul oscuro inicial */
+    transition: background-color 0.3s ease; /* Transición suave del fondo */
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    padding: 0; /* Elimina cualquier padding por defecto */
+    box-sizing: border-box; /* Asegura que el padding y el border se incluyan en las dimensiones */
+    font-family: Arial, sans-serif; /* Fuente para el texto */
+    color: white; /* Color del texto */
+}
+
+.container {
+    text-align: center; /* Centra el texto dentro del contenedor */
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 5px; /* Espacio entre el título y el párrafo */
+}
+
+p {
+    font-size: 18px;
+    margin-bottom: 20px; /* Espacio entre el párrafo y el slider */
+}
+
+#Breaker1 {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 200px; /* Ancho del slider */
+    height: 15px; /* Grosor de la barra */
+    background: #444; /* Color de la pista del slider */
+    border-radius: 10px; /* Bordes redondeados */
+    cursor: pointer;
+    outline: none;
+    transition: background 0.3s ease;
+}
+
+#Breaker1::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 30px; /* Ancho del pulgar */
+    height: 30px; /* Altura del pulgar */
+    background: grey; /* Color del pulgar inicial cuando está apagado */
+    border-radius: 50%; /* Hacer el pulgar circular */
+    box-shadow: 0 0 10px rgba(128, 128, 128, 0.6); /* Sombra para el pulgar cuando está apagado */
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+#Breaker1.on::-webkit-slider-thumb {
+    background: yellow; /* Color del pulgar cuando está encendido */
+    box-shadow: 0 0 10px rgba(255, 255, 0, 0.6); /* Sombra amarilla cuando está encendido */
+}
+
+#Breaker1::-moz-range-thumb {
+    width: 30px;
+    height: 30px;
+    background: grey; /* Color del pulgar inicial cuando está apagado */
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(128, 128, 128, 0.6); /* Sombra para el pulgar cuando está apagado */
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+#Breaker1.on::-moz-range-thumb {
+    background: yellow; /* Color del pulgar cuando está encendido */
+    box-shadow: 0 0 10px rgba(255, 255, 0, 0.6); /* Sombra amarilla cuando está encendido */
+}
+
+#Breaker1:active::-webkit-slider-thumb,
+#Breaker1:active::-moz-range-thumb {
+    transform: scale(1.2); /* Efecto de "presionado" cuando se arrastra */
+}
