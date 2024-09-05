@@ -1,31 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index.css"> <!-- Aqui se esta indicando que se utilizara el archivo de CSS para mejorar la vista -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Control de LED</title>
     <link rel="stylesheet" 
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body id="body">
 
+    <!-- Textos que contienen la pagina -->
+<div class="container">
+    <h1>Esteban Alcaraz</h1>
+    <p>Actividad de prender y apagar LED de Photon 2</p>
+    <p>Universidad de Colima</p>
+    <p>Ingeniería en software</p>
+    <p>Black Tibii</p>
+
+    <!-- Slider -->
+    <div class="slider-container">
+        <input type="range" min="0" max="1" step="1" value="0" class="slider" id="Breaker1" oninput="outputUpdate(val)">
+        <output for="Breaker1" id="state1"></output>
+    </div>
+
+    <!-- Imagen debajo del slider -->
+    <div class="image-container">
+        <img src="imagenMia.jpg" alt="Foto de Esteban" class="profile-image">
+    </div>
+</div>
+ 
+<!-- Librerias-->
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/particle-api-js@8/dist/particle.min.js"></script>
 <script src="https://use.fontawesome.com/releases/v5.15.2/js/all.js" data-auto-a11y="true"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.9.0/d3.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
-
-<div class="container">
-    <h1>Esteban Alcaraz</h1>
-    <p>Actividad de prender y apagar LED de Photon 2</p>
-    <p>Ingenieria en software</p>
-    <p>Black Tibii</p>
-    <input type="range" min="0" max="1" step="1" value="0" class="slider" id="Breaker1" oninput="outputUpdate(val)">
-    <output for="Breaker1" id="state1"></output>
-</div>
+<script src="index.js"></script>
 
 </body>
-<script src="index.js"></script>
 </html>

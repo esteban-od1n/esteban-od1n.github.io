@@ -1,0 +1,108 @@
+html, body {
+    height: 100%; /* El contenido ocupa el 100% de la altura de la pantalla. */
+    margin: 0; /* Elimina el margen predeterminado del navegador. */
+    display: flex; /* Utiliza flexbox para alinear el contenido. */
+    align-items: center; /* Centra el contenido verticalmente. */
+    justify-content: center; /* Centra el contenido horizontalmente. */
+    background-color: #002244; /* Define el color de fondo inicial (azul oscuro). */
+    transition: background-color 0.5s ease; /* Suaviza el cambio de color de fondo con una transición. */
+    width: 100%; /* El contenido ocupa el 100% del ancho de la pantalla. */
+    padding: 0; /* Elimina el relleno (padding) predeterminado. */
+    box-sizing: border-box; /* Incluye el padding y el borde en el ancho y alto total de los elementos. */
+    font-family: 'Arial', sans-serif; /* Define la fuente de los textos. */
+    color: #fff; /* El color del texto es blanco. */
+}
+
+.container {
+    text-align: center; /* Centra el texto dentro del contenedor. */
+    background: rgba(0, 0, 0, 0.5); /* Aplica un fondo negro semitransparente. */
+    padding: 20px; /* Añade espacio alrededor del contenido. */
+    border-radius: 15px; /* Redondea las esquinas del contenedor. */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Añade una sombra alrededor del contenedor. */
+}
+
+h1 {
+    font-size: 28px; /* Tamaño de la fuente del título. */
+    margin: 0 0 10px; /* Elimina el margen superior y añade 10px de margen inferior. */
+    font-weight: bold; /* Aplica negritas al texto. */
+    letter-spacing: 1px; /* Añade un espaciado entre las letras. */
+}
+
+p {
+    font-size: 18px; /* Tamaño de la fuente del párrafo. */
+    margin: 0 0 20px; /* Elimina el margen superior y añade 20px de margen inferior. */
+}
+
+.slider-container {
+    position: relative; /* Posiciona el slider en relación a su contenedor. */
+    display: inline-block; /* El slider ocupa solo el espacio necesario. */
+}
+
+#Breaker1 {
+    -webkit-appearance: none; /* Elimina el estilo predeterminado de Webkit (Chrome/Safari). */
+    appearance: none; /* Elimina el estilo predeterminado del slider. */
+    width: 250px; /* Ancho del control del slider. */
+    height: 12px; /* Grosor de la barra del slider. */
+    background: #555; /* Color de la pista del slider (gris oscuro). */
+    border-radius: 25px; /* Redondea los bordes de la pista del slider. */
+    cursor: pointer; /* Cambia el cursor a una mano cuando se pasa por encima. */
+    outline: none; /* Elimina el borde que aparece cuando el slider está enfocado. */
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2); /* Añade una sombra interna en la pista del slider. */
+    transition: background 0.3s ease; /* Suaviza los cambios de color de la pista del slider. */
+}
+
+#Breaker1::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Elimina el estilo predeterminado del pulgar (en Webkit). */
+    appearance: none; /* Elimina el estilo predeterminado del pulgar del slider. */
+    width: 35px; /* Ancho del "pulgar" (círculo que arrastra el usuario). */
+    height: 35px; /* Altura del pulgar del slider. */
+    background: grey; /* Color del pulgar inicial (gris). */
+    border-radius: 50%; /* Hace que el pulgar sea circular. */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); /* Añade una sombra suave al pulgar. */
+    transition: background 0.3s ease, transform 0.3s ease; /* Suaviza los cambios de color y tamaño del pulgar. */
+}
+
+#Breaker1.on::-webkit-slider-thumb {
+    background: yellow; /* Cambia el color del pulgar a amarillo cuando está "on". */
+    box-shadow: 0 2px 6px rgba(255, 255, 0, 0.5); /* Añade una sombra amarilla al pulgar cuando está "on". */
+}
+
+#Breaker1::-moz-range-thumb {
+    width: 35px; /* Ancho del pulgar en Firefox. */
+    height: 35px; /* Altura del pulgar en Firefox. */
+    background: grey; /* Color del pulgar inicial en Firefox (gris). */
+    border-radius: 50%; /* Hace que el pulgar sea circular en Firefox. */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); /* Añade una sombra suave al pulgar en Firefox. */
+    transition: background 0.3s ease, transform 0.3s ease; /* Suaviza los cambios de color y tamaño del pulgar en Firefox. */
+}
+
+#Breaker1.on::-moz-range-thumb {
+    background: yellow; /* Cambia el color del pulgar a amarillo cuando está "on" en Firefox. */
+    box-shadow: 0 2px 6px rgba(255, 255, 0, 0.5); /* Añade una sombra amarilla al pulgar cuando está "on" en Firefox. */
+}
+
+#Breaker1:active::-webkit-slider-thumb,
+#Breaker1:active::-moz-range-thumb {
+    transform: scale(1.2); /* Agranda el pulgar cuando se hace clic en él. */
+}
+
+.image-container {
+    margin-top: 20px; /* Añade espacio entre el slider y la imagen. */
+    display: flex; /* Utiliza flexbox para alinear la imagen. */
+    justify-content: center; /* Centra la imagen horizontalmente. */
+}
+
+.profile-image {
+    width: 300px; /* Ancho de la imagen. */
+    height: 300px; /* Altura de la imagen. */
+    border-radius: 50%; /* Hace que la imagen sea circular. */
+    object-fit: cover; /* Asegura que la imagen se ajuste sin distorsionarse. */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Añade una sombra suave alrededor de la imagen. */
+    border: 4px solid #fff; /* Añade un borde blanco alrededor de la imagen. */
+    transition: transform 0.3s ease; /* Suaviza el agrandado de la imagen al hacer hover. */
+}
+
+.profile-image:hover {
+    transform: scale(1.1); /* Agranda ligeramente la imagen cuando el usuario pasa el ratón por encima. */
+}
+    
