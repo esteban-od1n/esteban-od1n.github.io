@@ -1,0 +1,122 @@
+/* Estilo general del cuerpo */
+body {
+    font-family: 'Courier New', Courier, monospace; /* Fuente de estilo consola para todo el documento */
+    background-color: #1a1a1a; /* Fondo gris oscuro para toda la página */
+    color: white; /* Color de texto blanco */
+    display: flex; /* Utiliza Flexbox para alinear elementos */
+    justify-content: center; /* Centra horizontalmente el contenido */
+    align-items: center; /* Centra verticalmente el contenido */
+    height: 100vh; /* Altura completa de la ventana del navegador */
+    margin: 0; /* Elimina el margen por defecto */
+}
+
+/* Contenedor exterior con fondo gris oscuro */
+.outer-container {
+    background-color: #1a1a1a; /* Fondo gris oscuro, igual que el del body */
+    display: flex; /* Utiliza Flexbox para alinear elementos */
+    justify-content: center; /* Centra horizontalmente el contenido */
+    align-items: center; /* Centra verticalmente el contenido */
+    padding: 40px; /* Espacio interno alrededor del contenido */
+    height: 100vh; /* Altura completa de la ventana del navegador */
+}
+
+/* Contenedor que se elevará */
+.elevated-container {
+    background-color: #d3d3d3; /* Fondo gris claro (blanco) para el contenedor */
+    padding: 30px; /* Espacio interno ajustado */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.4); /* Sombra suave alrededor del contenedor */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efecto de transición suave para elevación y sombra */
+    display: flex; /* Utiliza Flexbox para alinear elementos internos */
+    flex-direction: column; /* Alinea los elementos verticalmente */
+    align-items: center; /* Centra horizontalmente los elementos internos */
+}
+
+/* Efecto de levantamiento cuando el cursor está sobre el contenedor */
+.elevated-container:hover {
+    transform: translateY(-10px); /* Mueve el contenedor hacia arriba al pasar el cursor */
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5); /* Aumenta la sombra para un efecto más prominente */
+}
+
+/* Estilo del texto 'TMS' */
+#TM {
+    font-size: 28px; /* Tamaño de fuente grande */
+    margin-bottom: 20px; /* Espacio inferior entre 'TMS' y el slider */
+    color: #000000; /* Color negro para el texto */
+    font-weight: bold; /* Fuente en negrita */
+}
+
+/* Contenedor para el slider y el output, alineados horizontalmente */
+.slider-container {
+    display: flex; /* Utiliza Flexbox para alinear elementos */
+    align-items: center; /* Centra verticalmente los elementos internos */
+}
+
+/* Slider */
+.slider {
+    -webkit-appearance: none; /* Elimina el estilo por defecto en WebKit (Chrome, Safari) */
+    appearance: none; /* Elimina el estilo por defecto en otros navegadores */
+    width: 300px; /* Ancho del slider */
+    height: 12px; /* Grosor de la barra del slider */
+    background: #222; /* Color de fondo de la barra del slider */
+    border-radius: 5px; /* Bordes redondeados de la barra del slider */
+    outline: none; /* Elimina el contorno por defecto cuando está enfocado */
+    transition: background 0.3s; /* Transición suave para el cambio de color de fondo */
+    margin-right: 20px; /* Espacio entre el slider y el output */
+}
+
+.slider:hover {
+    background: #444; /* Cambio de color de fondo al pasar el cursor sobre el slider */
+}
+
+/* Estilo del pulgar del slider */
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Elimina el estilo por defecto en WebKit (Chrome, Safari) */
+    appearance: none; /* Elimina el estilo por defecto en otros navegadores */
+    width: 30px; /* Ancho del pulgar del slider */
+    height: 30px; /* Altura del pulgar del slider */
+    background: #ff4444; /* Color rojo para el pulgar */
+    border-radius: 50%; /* Forma circular para el pulgar */
+    cursor: pointer; /* Cambia el cursor a mano al pasar sobre el pulgar */
+    transition: transform 0.3s; /* Transición suave para el efecto de ampliación */
+}
+
+.slider:active::-webkit-slider-thumb {
+    transform: scale(1.2); /* Ampliación del pulgar al presionar */
+}
+
+.slider::-moz-range-thumb {
+    width: 30px; /* Ancho del pulgar del slider */
+    height: 30px; /* Altura del pulgar del slider */
+    background: #ff4444; /* Color rojo para el pulgar */
+    border-radius: 50%; /* Forma circular para el pulgar */
+    cursor: pointer; /* Cambia el cursor a mano al pasar sobre el pulgar */
+    transition: transform 0.3s; /* Transición suave para el efecto de ampliación */
+}
+
+/* Pantalla que muestra el valor del slider */
+output {
+    display: inline-block; /* Se muestra en línea con un bloque alrededor */
+    padding: 10px 15px; /* Espaciado interno */
+    background-color: #00ff44; /* Fondo verde brillante */
+    color: #000; /* Color del texto negro */
+    font-size: 24px; /* Tamaño de fuente grande */
+    border: 2px solid #00ff00; /* Borde verde fosforescente */
+    border-radius: 5px; /* Bordes redondeados */
+    font-family: 'Courier New', Courier, monospace; /* Fuente de estilo consola */
+    box-shadow: 0px 0px 10px #00ff00; /* Sombra verde brillante */
+    margin-left: 20px; /* Espacio entre el slider y el output */
+}
+
+/* Mostrar los datos en la interfaz */
+.data-display {
+    margin-top: 20px; /* Espacio superior para separar del contenido anterior */
+    padding: 10px; /* Espaciado interno */
+    background-color: #222; /* Fondo oscuro para el área de datos */
+    color: #00ff44; /* Color de texto verde brillante */
+    border: 1px solid #00ff00; /* Borde verde fosforescente */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 18px; /* Tamaño de fuente ajustado */
+    font-family: 'Courier New', Courier, monospace; /* Fuente de estilo consola */
+    box-shadow: 0px 0px 10px #00ff00; /* Sombra verde brillante */
+}
